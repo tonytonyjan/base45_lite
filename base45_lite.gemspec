@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name = 'base45_lite'
-  spec.version = '1.0.0'
+  spec.version = '1.0.1'
   spec.authors = ['Weihang Jian']
   spec.email = ['tonytonyjan@gmail.com']
   spec.summary = 'Base45 encoder/decoder'
