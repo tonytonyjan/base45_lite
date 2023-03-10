@@ -50,12 +50,12 @@ module Base45Lite
       _, d = i.divmod(45)
       sequence.push(c, d)
     end
-    sequence.map!{ MAPPING[_1] }.join
+    sequence.map!{ |n| MAPPING[n] }.join
   end
 
   def self.decode(input)
     input
-      .chars.map! { REVERSE_MAPPING[_1] || raise(InvalidCharacterError) }
+      .chars.map! { |c| REVERSE_MAPPING[c] || raise(InvalidCharacterError) }
       .each_slice(3).map do |slice|
         c, d, e = slice
         raise ForbiddenLengthError if d.nil?
